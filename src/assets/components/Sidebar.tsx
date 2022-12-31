@@ -1,4 +1,4 @@
-import React, { ReactComponentElement } from "react";
+import React, { ReactComponentElement, MouseEvent } from "react";
 import reactLogo from "../react.svg";
 import { Note, NotesArray } from "../../config/types";
 import { SidebarProps } from "../../config/types";

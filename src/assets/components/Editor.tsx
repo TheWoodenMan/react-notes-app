@@ -1,12 +1,7 @@
 import { useState } from "react";
 import ReactMde from "react-mde";
 import Showdown from "showdown";
-import {
-	Note,
-	NotesArray,
-	FindCurrentNote,
-	UpdateNote
-} from "../../config/types";
+import { Note, UpdateNote } from "../../config/types";
 
 export default function Editor({
 	currentNote,
@@ -15,7 +10,7 @@ export default function Editor({
 	currentNote: Note;
 	updateNote: UpdateNote;
 }): JSX.Element {
-	const [selectedTab, setSelectedTab] = useState("write");
+	const [selectedTab, setSelectedTab] = useState<"write" | "preview">("write");
 
 	const converter = new Showdown.Converter({
 		tables: true,

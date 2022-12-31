@@ -4,11 +4,11 @@ export type Note = {
 };
 
 export type NotesArray = Note[];
-export type FindCurrentNote = () => NotesArray;
+export type FindCurrentNote = () => Note;
 export type SetCurrentNoteId = (arg: string) => void;
 export type DeleteNote = (event: Event | undefined, noteId: Note["id"]) => void;
 export type CreateNewNote = () => void;
-export type UpdateNote = (text: string) => NotesArray;
+export type UpdateNote = (text: string) => NotesArray | void;
 
 export type SidebarProps = {
 	notes: NotesArray;
@@ -17,5 +17,3 @@ export type SidebarProps = {
 	deleteNote: DeleteNote;
 	newNote: CreateNewNote;
 };
-
-export type EditorProps = {};
